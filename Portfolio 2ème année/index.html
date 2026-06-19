@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corentin Friedmann — Portfolio DevCloud | Réseau & Cloud</title>
+    <meta name="description" content="Portfolio de Corentin Friedmann, étudiant en BUT Réseaux et Télécommunications — Parcours DevCloud. Ingénierie Réseau, Architecture Cloud, Docker, Linux.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-brand">CF<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#hero" class="magnetic-btn nav-link active" data-section="hero">Accueil</a></li>
+            <li><a href="#profil" class="magnetic-btn nav-link" data-section="profil">Profil</a></li>
+            <li><a href="#competences" class="magnetic-btn nav-link" data-section="competences">Compétences</a></li>
+            <li><a href="#cv" class="magnetic-btn nav-link" data-section="cv">CV & Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-link">Accueil</a></li>
+            <li><a href="#profil" class="mobile-link">Profil</a></li>
+            <li><a href="#competences" class="mobile-link">Compétences</a></li>
+            <li><a href="#cv" class="mobile-link">CV & Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- ===================== SECTION 1 : HERO ===================== -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-tag reveal-text">
+                    <span class="status-dot"></span>
+                    BUT R&T — DevCloud
+                </div>
+                <h1 class="hero-title">
+                    <span class="line reveal-text">Corentin</span>
+                    <span class="line reveal-text gradient-text">Friedmann</span>
+                </h1>
+                <h2 class="hero-subtitle reveal-text">Ingénierie Réseau <span class="amp">&</span> Architecture Cloud</h2>
+                <p class="hero-desc reveal-text">Étudiant en 2ème année de BUT Réseaux et Télécommunications — Parcours Développement Système et Cloud (DevCloud) à l'IUT de Colmar.</p>
+                <div class="hero-actions reveal-text">
+                    <a href="#competences" class="btn-premium magnetic-btn">
+                        <span>Découvrir mes compétences</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#cv" class="btn-glass magnetic-btn">
+                        <i class="ri-file-download-line"></i>
+                        <span>Mon CV</span>
+                    </a>
+                </div>
+                <div class="hero-stack reveal-text">
+                    <span class="stack-item">Cisco</span>
+                    <span class="stack-divider"></span>
+                    <span class="stack-item">Linux</span>
+                    <span class="stack-divider"></span>
+                    <span class="stack-item">Docker</span>
+                    <span class="stack-divider"></span>
+                    <span class="stack-item">Python</span>
+                    <span class="stack-divider"></span>
+                    <span class="stack-item">GNS3</span>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>scroll</span>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION 2 : PROFIL ===================== -->
+        <section id="profil" class="profil-section section-padding">
+            <div class="section-heading">
+                <span class="section-tag reveal-text">À propos</span>
+                <h2 class="reveal-text">Qui suis-<span class="text-glow">je</span> ?</h2>
+            </div>
+
+            <div class="profil-grid">
+                <div class="profil-card glass-card reveal-up">
+                    <div class="card-accent"></div>
+                    <div class="profil-icon-wrap">
+                        <i class="ri-code-s-slash-line"></i>
+                    </div>
+                    <h3>Mon parcours & ma vision</h3>
+                    <p>Passionné par la conception d'infrastructures réseaux et l'automatisation des systèmes, je construis mon expertise technique autour du <strong>routage avancé</strong> et des <strong>environnements Linux</strong>. Mon parcours académique en BUT DevCloud me permet d'aborder des problématiques complexes allant de la configuration de matériels physiques à l'orchestration de conteneurs virtuels.</p>
+                </div>
+
+                <div class="profil-card glass-card reveal-up">
+                    <div class="card-accent accent-cyan"></div>
+                    <div class="profil-icon-wrap icon-cyan">
+                        <i class="ri-team-line"></i>
+                    </div>
+                    <h3>Mes Soft Skills</h3>
+                    <p>Au-delà de mes compétences techniques, j'accorde une importance majeure à mes "soft skills". Mon diplôme d'animateur <strong>BAFA</strong> m'a appris à encadrer des groupes, à faire preuve de pédagogie et à adapter ma communication. Mon emploi étudiant chez <strong>McDonald's</strong> a consolidé ma résistance au stress, ma capacité à travailler en équipe synchronisée et ma rigueur dans le respect strict des procédures.</p>
+                </div>
+            </div>
+
+            <div class="soft-skills-marquee reveal-up">
+                <div class="marquee-track">
+                    <div class="skill-chip"><i class="ri-group-line"></i><span>Travail d'équipe</span></div>
+                    <div class="skill-chip"><i class="ri-mental-health-line"></i><span>Résistance au stress</span></div>
+                    <div class="skill-chip"><i class="ri-presentation-line"></i><span>Pédagogie</span></div>
+                    <div class="skill-chip"><i class="ri-timer-flash-line"></i><span>Rigueur</span></div>
+                    <div class="skill-chip"><i class="ri-chat-smile-3-line"></i><span>Communication</span></div>
+                    <div class="skill-chip"><i class="ri-lightbulb-flash-line"></i><span>Autonomie</span></div>
+                    <div class="skill-chip"><i class="ri-shield-check-line"></i><span>Adaptabilité</span></div>
+                    <div class="skill-chip"><i class="ri-compass-3-line"></i><span>Esprit d'initiative</span></div>
+                    <!-- Duplicated for infinite marquee -->
+                    <div class="skill-chip"><i class="ri-group-line"></i><span>Travail d'équipe</span></div>
+                    <div class="skill-chip"><i class="ri-mental-health-line"></i><span>Résistance au stress</span></div>
+                    <div class="skill-chip"><i class="ri-presentation-line"></i><span>Pédagogie</span></div>
+                    <div class="skill-chip"><i class="ri-timer-flash-line"></i><span>Rigueur</span></div>
+                    <div class="skill-chip"><i class="ri-chat-smile-3-line"></i><span>Communication</span></div>
+                    <div class="skill-chip"><i class="ri-lightbulb-flash-line"></i><span>Autonomie</span></div>
+                    <div class="skill-chip"><i class="ri-shield-check-line"></i><span>Adaptabilité</span></div>
+                    <div class="skill-chip"><i class="ri-compass-3-line"></i><span>Esprit d'initiative</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION 3 : LES 5 COMPÉTENCES ===================== -->
+        <section id="competences" class="competences-section section-padding">
+            <div class="section-heading">
+                <span class="section-tag reveal-text">Portfolio</span>
+                <h2 class="reveal-text">Les 5 <span class="text-glow">Piliers</span> de ma formation</h2>
+                <p class="reveal-text">L'application concrète et réflexive de mes apprentissages critiques.</p>
+            </div>
+
+            <!-- Navigation Compétences -->
+            <div class="comp-nav reveal-up">
+                <button class="comp-nav-btn active" data-target="comp1">
+                    <span class="comp-nav-num">01</span>
+                    <span class="comp-nav-label">Administrer</span>
+                </button>
+                <button class="comp-nav-btn" data-target="comp2">
+                    <span class="comp-nav-num">02</span>
+                    <span class="comp-nav-label">Connecter</span>
+                </button>
+                <button class="comp-nav-btn" data-target="comp3">
+                    <span class="comp-nav-num">03</span>
+                    <span class="comp-nav-label">Programmer</span>
+                </button>
+                <button class="comp-nav-btn" data-target="comp4">
+                    <span class="comp-nav-num">04</span>
+                    <span class="comp-nav-label">Orchestrer</span>
+                </button>
+                <button class="comp-nav-btn" data-target="comp5">
+                    <span class="comp-nav-num">05</span>
+                    <span class="comp-nav-label">Cloud</span>
+                </button>
+            </div>
+
+            <!-- COMPÉTENCE 1 -->
+            <div class="competence-block active" id="comp1">
+                <div class="comp-header glass-card reveal-up">
+                    <div class="comp-number"><span>01</span></div>
+                    <div class="comp-title-wrap">
+                        <h3>Administrer les réseaux et l'Internet</h3>
+                        <div class="comp-tags">
+                            <span class="tag tag-ac" title="Routage dynamique">AC21.01</span>
+                            <span class="tag tag-ce" title="Approche rigoureuse de résolution">CE1.03</span>
+                            <span class="tag">Cisco</span>
+                            <span class="tag">OSPF</span>
+                            <span class="tag">BGP</span>
+                            <span class="tag">MPLS</span>
+                            <span class="tag">VRF</span>
+                            <span class="tag">GNS3</span>
+                        </div>
+                    </div>
+                    <div class="comp-icon"><i class="ri-router-line"></i></div>
+                </div>
+
+                <div class="comp-body">
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label">
+                            <i class="ri-map-pin-line"></i> Contexte
+                        </div>
+                        <p>Dans le cadre des SAÉ de déploiement d'infrastructures et des laboratoires de routage de 2ème année, j'ai eu pour mission de concevoir et d'administrer le <strong>réseau cœur d'une entreprise multi-sites</strong>. Ce travail a été réalisé sur des équipements physiques Cisco et via l'environnement d'émulation GNS3.</p>
+                    </div>
+
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label">
+                            <i class="ri-tools-line"></i> Actions & Traces
+                        </div>
+                        <ul class="action-list">
+                            <li><i class="ri-arrow-right-s-fill"></i> Déploiement de topologies complexes intégrant les protocoles <strong>OSPF</strong> et <strong>BGP</strong>.</li>
+                            <li><i class="ri-arrow-right-s-fill"></i> Mise en œuvre du protocole <strong>MPLS</strong> et configuration de <strong>VRF</strong> pour isoler les tables de routage des différents clients virtuels.</li>
+                        </ul>
+                        <div class="trace-badges">
+                            <span class="trace-badge"><i class="ri-screenshot-line"></i> Captures GNS3</span>
+                            <span class="trace-badge"><i class="ri-terminal-box-line"></i> show ip bgp summary</span>
+                            <span class="trace-badge"><i class="ri-file-code-line"></i> Configs Cisco</span>
+                        </div>
+                    </div>
+
+                    <div class="comp-section bilan-section glass-card reveal-up">
+                        <div class="comp-section-label">
+                            <i class="ri-lightbulb-line"></i> Bilan & Réflexivité
+                        </div>
+                        <div class="bilan-grid">
+                            <div class="bilan-block bilan-difficulty">
+                                <h4><i class="ri-error-warning-line"></i> Difficulté surmontée</h4>
+                                <p>Lors de la configuration de l'infrastructure, j'ai rencontré un <strong>blocage critique sur le processus Router BGP 34</strong>. L'adjacence entre les voisins ne s'établissait pas. Après investigation, le problème provenait d'une incohérence entre les masques réseau déclarés et la configuration spécifique des neighbors.</p>
+                            </div>
+                            <div class="bilan-block bilan-growth">
+                                <h4><i class="ri-arrow-up-circle-line"></i> Généralisation</h4>
+                                <p>J'ai dû reprendre l'analyse de mes trames pour isoler l'erreur de masque. Cette situation m'a appris à <strong>ne jamais présumer de la validité d'une configuration</strong> sans la vérifier méthodiquement, assurant ainsi le respect strict des règles métier. J'ai acquis une démarche de troubleshooting rigoureuse et itérative <span class="ref-badge">AC21.01</span>. Cette méthode d'investigation est une compétence que je pourrai transposer directement lors de mes futures missions de support technique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPÉTENCE 2 -->
+            <div class="competence-block" id="comp2">
+                <div class="comp-header glass-card reveal-up">
+                    <div class="comp-number"><span>02</span></div>
+                    <div class="comp-title-wrap">
+                        <h3>Connecter les entreprises et les usagers</h3>
+                        <div class="comp-tags">
+                            <span class="tag tag-ac" title="Transmissions complexes">AC22.01</span>
+                            <span class="tag tag-ce" title="Démarche scientifique">CE2.02</span>
+                            <span class="tag">ns-3</span>
+                            <span class="tag">TAP</span>
+                            <span class="tag">Namespaces</span>
+                            <span class="tag">Linux Debian</span>
+                        </div>
+                    </div>
+                    <div class="comp-icon"><i class="ri-links-line"></i></div>
+                </div>
+
+                <div class="comp-body">
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-map-pin-line"></i> Contexte</div>
+                        <p>Lors d'un projet académique réseau, l'objectif était de <strong>lier un environnement de simulation de trafic avec un système d'exploitation de production</strong>, afin d'observer le comportement des paquets dans des conditions proches du réel.</p>
+                    </div>
+
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-tools-line"></i> Actions & Traces</div>
+                        <ul class="action-list">
+                            <li><i class="ri-arrow-right-s-fill"></i> Déploiement de scénarios de simulation à l'aide de l'outil <strong>ns-3</strong>.</li>
+                            <li><i class="ri-arrow-right-s-fill"></i> Configuration d'interfaces virtuelles <strong>TAP</strong> et manipulation avancée des <strong>Namespaces</strong> sous Linux Debian.</li>
+                        </ul>
+                        <div class="trace-badges">
+                            <span class="trace-badge"><i class="ri-file-text-line"></i> Synthèse technique</span>
+                            <span class="trace-badge"><i class="ri-terminal-box-line"></i> Commandes Namespaces</span>
+                        </div>
+                    </div>
+
+                    <div class="comp-section bilan-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-lightbulb-line"></i> Bilan & Réflexivité</div>
+                        <div class="bilan-grid">
+                            <div class="bilan-block bilan-difficulty">
+                                <h4><i class="ri-error-warning-line"></i> Difficulté surmontée</h4>
+                                <p>L'isolation des flux et la création de ponts stables entre le simulateur <strong>ns-3</strong> et les interfaces physiques de Debian ont généré des <strong>conflits de routage complexes</strong> qui dépassaient le cadre de mes cours initiaux.</p>
+                            </div>
+                            <div class="bilan-block bilan-growth">
+                                <h4><i class="ri-arrow-up-circle-line"></i> Généralisation</h4>
+                                <p>Pour débloquer la situation, j'ai fait preuve d'<strong>autonomie</strong> en menant mes propres recherches sur la pile réseau du noyau Linux. En restructurant logiquement mes Namespaces, j'ai pu proposer une architecture stable et rédiger une synthèse explicative. Cela démontre ma capacité à appliquer une <strong>démarche scientifique</strong> <span class="ref-badge">CE2.02</span> face à un problème inconnu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPÉTENCE 3 -->
+            <div class="competence-block" id="comp3">
+                <div class="comp-header glass-card reveal-up">
+                    <div class="comp-number"><span>03</span></div>
+                    <div class="comp-title-wrap">
+                        <h3>Programmer des outils et applications informatiques</h3>
+                        <div class="comp-tags">
+                            <span class="tag tag-ac" title="Développement applicatif">AC23.02</span>
+                            <span class="tag tag-ce" title="Outils de développement adaptés">CE3.04</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Discord API</span>
+                            <span class="tag">POO</span>
+                            <span class="tag">Base de données</span>
+                        </div>
+                    </div>
+                    <div class="comp-icon"><i class="ri-code-box-line"></i></div>
+                </div>
+
+                <div class="comp-body">
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-map-pin-line"></i> Contexte</div>
+                        <p>Pour perfectionner ma logique algorithmique et maîtriser le cycle de vie d'un logiciel, j'ai mené un <strong>projet personnel de développement</strong> : la conception complète d'un bot Discord nommé <strong>"Stake"</strong>, articulé autour de mini-jeux et de mécaniques de casino en ligne.</p>
+                    </div>
+
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-tools-line"></i> Actions & Traces</div>
+                        <ul class="action-list">
+                            <li><i class="ri-arrow-right-s-fill"></i> Programmation du bot et intégration d'algorithmes basés sur le <strong>calcul de probabilités mathématiques</strong> (Roulette, Blackjack).</li>
+                            <li><i class="ri-arrow-right-s-fill"></i> Gestion d'une <strong>base de données</strong> pour assurer la persistance des informations des utilisateurs.</li>
+                        </ul>
+                        <div class="trace-badges">
+                            <span class="trace-badge"><i class="ri-github-fill"></i> Repository GitHub</span>
+                            <span class="trace-badge"><i class="ri-screenshot-line"></i> Captures Discord</span>
+                        </div>
+                    </div>
+
+                    <div class="comp-section bilan-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-lightbulb-line"></i> Bilan & Réflexivité</div>
+                        <div class="bilan-grid">
+                            <div class="bilan-block bilan-difficulty">
+                                <h4><i class="ri-error-warning-line"></i> Difficulté surmontée</h4>
+                                <p>Le défi majeur a été de gérer l'<strong>asynchronisme</strong>. Lorsque plusieurs utilisateurs lançaient des commandes simultanément, des conflits de requêtes faisaient crasher l'application. J'ai également dû réviser la nomenclature de mon code après une erreur initiale dans le nommage du bot.</p>
+                            </div>
+                            <div class="bilan-block bilan-growth">
+                                <h4><i class="ri-arrow-up-circle-line"></i> Généralisation</h4>
+                                <p>J'ai résolu ces instabilités en refondant mon code selon les principes stricts de la <strong>Programmation Orientée Objet (POO)</strong> et en intégrant une capture systématique des exceptions. Cette refonte m'a fait comprendre l'importance d'une architecture logicielle pensée pour la <strong>scalabilité</strong> <span class="ref-badge">AC23.02</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPÉTENCE 4 -->
+            <div class="competence-block" id="comp4">
+                <div class="comp-header glass-card reveal-up">
+                    <div class="comp-number"><span>04</span></div>
+                    <div class="comp-title-wrap">
+                        <h3>Orchestrer</h3>
+                        <span class="parcours-badge">Parcours DevCloud</span>
+                        <div class="comp-tags">
+                            <span class="tag tag-ac" title="Virtualisation d'environnement">AC24.02DevCloud</span>
+                            <span class="tag tag-ce" title="Respect du cahier des charges">CE4.01</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Docker Compose</span>
+                            <span class="tag">VirtualBox</span>
+                            <span class="tag">IaC</span>
+                        </div>
+                    </div>
+                    <div class="comp-icon"><i class="ri-stack-line"></i></div>
+                </div>
+
+                <div class="comp-body">
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-map-pin-line"></i> Contexte</div>
+                        <p>Au cours du semestre, j'ai dû répondre aux exigences d'<strong>industrialisation des infrastructures</strong> <span class="ref-badge">CE4.01</span> en déployant des services virtualisés de manière modulaire, isolée et facilement reproductible.</p>
+                    </div>
+
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-tools-line"></i> Actions & Traces</div>
+                        <ul class="action-list">
+                            <li><i class="ri-arrow-right-s-fill"></i> Mise en production d'environnements virtualisés via <strong>VirtualBox</strong>.</li>
+                            <li><i class="ri-arrow-right-s-fill"></i> Création, déploiement et orchestration de <strong>conteneurs Docker</strong> sur des environnements Debian.</li>
+                        </ul>
+                        <div class="trace-badges">
+                            <span class="trace-badge"><i class="ri-file-code-line"></i> Dockerfile</span>
+                            <span class="trace-badge"><i class="ri-file-code-line"></i> docker-compose.yml</span>
+                            <span class="trace-badge"><i class="ri-flow-chart"></i> Schémas réseau bridge</span>
+                        </div>
+                    </div>
+
+                    <div class="comp-section bilan-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-lightbulb-line"></i> Bilan & Réflexivité</div>
+                        <div class="bilan-grid">
+                            <div class="bilan-block bilan-difficulty">
+                                <h4><i class="ri-error-warning-line"></i> Difficulté surmontée</h4>
+                                <p>Mes premières interconnexions multi-services manquaient de stabilité : la suppression d'un conteneur entraînait la <strong>perte des données</strong>, et la communication réseau entre conteneurs isolés était défaillante.</p>
+                            </div>
+                            <div class="bilan-block bilan-growth">
+                                <h4><i class="ri-arrow-up-circle-line"></i> Généralisation</h4>
+                                <p>J'ai approfondi le fonctionnement du démon Docker en implémentant des <strong>Volumes</strong> pour découpler le stockage de l'exécution, et en paramétrant des réseaux virtuels custom. J'ai assimilé la philosophie de l'<strong>Infrastructure as Code (IaC)</strong> <span class="ref-badge">AC24.02 DevCloud</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPÉTENCE 5 -->
+            <div class="competence-block" id="comp5">
+                <div class="comp-header glass-card reveal-up">
+                    <div class="comp-number"><span>05</span></div>
+                    <div class="comp-title-wrap">
+                        <h3>Développer pour le Cloud</h3>
+                        <span class="parcours-badge">Parcours DevCloud</span>
+                        <div class="comp-tags">
+                            <span class="tag tag-ac" title="Développement de microservices">AC25.01DevCloud</span>
+                            <span class="tag tag-ce" title="Bonnes pratiques de production">CE5.03</span>
+                            <span class="tag">Bash</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flatpak</span>
+                            <span class="tag">Snap</span>
+                            <span class="tag">Debian</span>
+                        </div>
+                    </div>
+                    <div class="comp-icon"><i class="ri-cloud-line"></i></div>
+                </div>
+
+                <div class="comp-body">
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-map-pin-line"></i> Contexte</div>
+                        <p>L'administration système moderne repose sur l'automatisation. J'ai été évalué sur ma capacité à <strong>scripter des tâches récurrentes</strong> d'administration et à déployer des services en respectant les bonnes pratiques de production <span class="ref-badge">CE5.03</span>.</p>
+                    </div>
+
+                    <div class="comp-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-tools-line"></i> Actions & Traces</div>
+                        <ul class="action-list">
+                            <li><i class="ri-arrow-right-s-fill"></i> Développement de <strong>scripts d'automatisation d'administration</strong> sous Debian.</li>
+                            <li><i class="ri-arrow-right-s-fill"></i> Gestion avancée des paquets via <strong>Flatpak</strong> et <strong>Snap</strong>.</li>
+                        </ul>
+                        <div class="trace-badges">
+                            <span class="trace-badge"><i class="ri-terminal-box-line"></i> Scripts Bash/Python</span>
+                            <span class="trace-badge"><i class="ri-play-circle-line"></i> Traces d'exécution</span>
+                        </div>
+                    </div>
+
+                    <div class="comp-section bilan-section glass-card reveal-up">
+                        <div class="comp-section-label"><i class="ri-lightbulb-line"></i> Bilan & Réflexivité</div>
+                        <div class="bilan-grid">
+                            <div class="bilan-block bilan-difficulty">
+                                <h4><i class="ri-error-warning-line"></i> Difficulté surmontée</h4>
+                                <p>L'exécution de scripts complexes interagissant avec les <strong>privilèges administrateur (root)</strong> du système de fichiers a parfois généré des erreurs de droits bloquantes et des comportements inattendus.</p>
+                            </div>
+                            <div class="bilan-block bilan-growth">
+                                <h4><i class="ri-arrow-up-circle-line"></i> Généralisation</h4>
+                                <p>Pour sécuriser mes processus, j'ai systématisé l'ajout de <strong>structures de contrôle</strong> et la génération de <strong>fichiers de logs</strong>. J'ai compris que l'automatisation ne tolère pas l'imprécision. Cette approche défensive du code me permet de m'intégrer dans une chaîne de <strong>déploiement continu DevOps</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION : BILAN ACADÉMIQUE ===================== -->
+        <section id="bilan" class="bilan-section section-padding">
+            <div class="section-heading">
+                <span class="section-tag reveal-text">Résultats</span>
+                <h2 class="reveal-text">Bilan <span class="text-glow">Académique</span></h2>
+                <p class="reveal-text">Points forts et évaluations tirés de mes bulletins (S3/S4).</p>
+            </div>
+
+            <div class="glass-card reveal-up ppp-card" style="max-width: 800px; margin: 0 auto;">
+                <div class="progress-container">
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span class="subj">Réseaux Opérateurs & BGP</span>
+                            <span class="score">16.50/20 <span class="sem">S3</span></span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill fill-cyan" style="width: 82.5%"></div></div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span class="subj">Infrastructures de sécurité</span>
+                            <span class="score">15.45/20 <span class="sem">S4</span></span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill fill-indigo" style="width: 77.25%"></div></div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span class="subj">Anglais professionnel</span>
+                            <span class="score">~14/20 <span class="sem">S3/S4</span></span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill fill-purple" style="width: 70%"></div></div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span class="subj">Virtualisation avancée</span>
+                            <span class="score">13.00/20 <span class="sem">S3</span></span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill fill-blue" style="width: 65%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION : PPP ===================== -->
+        <section id="ppp" class="ppp-section section-padding">
+            <div class="section-heading">
+                <span class="section-tag reveal-text">Vision</span>
+                <h2 class="reveal-text">Projet Personnel <span class="text-glow">& Professionnel</span></h2>
+            </div>
+            
+            <div class="ppp-grid">
+                <div class="glass-card reveal-up ppp-goal">
+                    <div class="cv-card-icon icon-cyan">
+                        <i class="ri-focus-3-line"></i>
+                    </div>
+                    <h3>Objectif à court terme</h3>
+                    <p class="goal-text">Recherche active d'un <strong>contrat d'apprentissage d'un an</strong> en ingénierie réseau, systèmes ou cloud pour <strong>septembre 2026</strong>.</p>
+                </div>
+                
+                <div class="glass-card reveal-up ppp-softskills">
+                    <div class="cv-card-icon">
+                        <i class="ri-mind-map"></i>
+                    </div>
+                    <h3>Atouts Transversaux</h3>
+                    <ul class="action-list">
+                        <li><i class="ri-arrow-right-s-fill"></i> <strong>Certification BAFA :</strong> Expérience concrète dans l'encadrement, le sens des responsabilités et la communication interpersonnelle.</li>
+                        <li><i class="ri-arrow-right-s-fill"></i> <strong>Restauration Rapide (McDonald's) :</strong> Développement d'une forte gestion du stress, rigueur absolue des process et travail en équipe hautement synchronisée.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION 4 : CV & CONTACT ===================== -->
+        <section id="cv" class="cv-section section-padding">
+            <div class="section-heading">
+                <span class="section-tag reveal-text">Contact</span>
+                <h2 class="reveal-text">Mon CV <span class="text-glow">&</span> Contact</h2>
+            </div>
+
+            <div class="cv-contact-grid">
+                <!-- CV Card -->
+                <div class="cv-card">
+                    <div class="cv-card-icon">
+                        <i class="ri-file-user-line"></i>
+                    </div>
+                    <h3>Curriculum Vitae</h3>
+                    <p>Conformément aux exigences de la formation et pour vous permettre d'avoir une vision globale de mon parcours, de mes certifications et de mes expériences professionnelles, mon CV est disponible au téléchargement.</p>
+                    <div class="cv-download-btns">
+                        <a href="CV_Corentin_Friedmann.pdf.pdf" download class="btn-premium magnetic-btn">
+                            <i class="ri-file-download-line"></i>
+                            <span>CV Français</span>
+                        </a>
+                        <a href="CV_Corentin_Friedmann_EN.pdf" download class="btn-glass magnetic-btn">
+                            <i class="ri-global-line"></i>
+                            <span>CV English</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="contact-card">
+                    <div class="cv-card-icon icon-cyan">
+                        <i class="ri-mail-send-line"></i>
+                    </div>
+                    <h3>Me contacter</h3>
+                    <p>Je suis disponible pour échanger sur mes projets, mes compétences et toute opportunité professionnelle.</p>
+                    <a href="mailto:corentin.friedmann@proton.me" class="email-block magnetic-btn">
+                        <i class="ri-mail-line"></i>
+                        <span>corentin.friedmann@proton.me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span class="footer-brand">CF<span class="accent">.</span></span>
+            <p>© <span id="current-year"></span> Corentin Friedmann — Portfolio BUT R&T DevCloud</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
